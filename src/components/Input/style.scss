@@ -1,0 +1,28 @@
+.input-element {
+  display: inline-flex;
+  max-width: 150px;
+  padding: 0 10px;
+  margin-top: 20px;
+
+  label {
+    margin-right: 10px;
+  }
+
+  input {
+    width: 50px
+  }
+}
+.input-element-content {
+  display: inline-flex;
+  margin-top: 20px;
+  flex-grow: 1;
+  width: 100%;
+
+  label {
+    margin-right: 10px;
+  }
+
+  input {
+    width: 50%;
+  }
+}

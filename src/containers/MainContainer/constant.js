@@ -1,0 +1,3 @@
+export const SAVE_NODE = "SAVE_NODE";
+export const RESET_NODE = "RESET_NODE";
+export const SAVE_STATE_CHILDREN = "SAVE_STATE_CHILDREN";

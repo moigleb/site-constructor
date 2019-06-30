@@ -1,0 +1,30 @@
+.btn, .btn-active {
+  background-color: blue;
+  padding: 10px 20px;
+  border-color: blue;
+  border-radius: 5px;
+  outline: 0;
+  color: white;
+  font-size: 16px;
+  width: 100%;
+
+  &.div {
+    max-width: 150px;
+  }
+  &.h1 {
+    max-width: 250px;
+  }
+  &.ul {
+    max-width: 350px;
+  }
+  &.p {
+    max-width: 300px;
+  }
+}
+
+.tooltip {
+  display: inline-block;
+  position: fixed;
+  padding: .5em 1em;
+  background-color: #f1f1f1;
+}
