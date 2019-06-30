@@ -57,11 +57,8 @@ class MainContainer extends React.Component {
   };
 
   addChild = (tag, styles)=>(e) => {
-
     const nodeItem = {tag, styles};
-
     this.props.addNode(nodeItem);
-    // this.props.onClick(tag);
   };
 
   handlePreviewClick = () => {
@@ -76,7 +73,7 @@ class MainContainer extends React.Component {
   };
 
   renderElement=()=>{
-    const{ selectedElement, nodeProps:{node} } = this.props;
+    const{ nodeProps:{node} } = this.props;
     const children = [];
 
     for (let i = 0; i < node.length; i++) {

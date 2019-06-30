@@ -50,6 +50,5 @@ class ElementProps extends React.Component {
         </div>
     );
   }
-
 }
 export default ElementProps;

@@ -11,14 +11,13 @@ export default function selectedElementReducer(state = initialState, action) {
         ...state,
         selectedElement: action.selectedElement
       };
+
     case UNSELECTED_ELEMENT:
-      // const unSelect = state.selectedElement.filter(
-      //   item => item.id !== action.id
-      // );
       return {
         ...state,
         selectedElement: initialState.selectedElement
       };
+
     default :
       return state;
   }

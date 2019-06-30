@@ -7,7 +7,7 @@ export const HtmlTagCreator = ({tagName, styles, content, ...props}) => {
     case "div":
       let backgroundImageValue =  styles["imagePreviewUrl"];
      if(!!backgroundImageValue){
-       tagContent = <><img style={{width: styles.width, position: "absolute", top: 0, left: 0, borderRadius: styles.borderRadius}} src={backgroundImageValue} alt=""/><span style={{margin: 30, position: "relative"}}>{content}</span></>
+       tagContent = <><img style={{width: styles.width, borderRadius: styles.borderRadius}} src={backgroundImageValue} alt=""/><span style={{margin: 30, position: "absolute", top: 0, left: 0}}>{content}</span></>
      }
 
       return <div style={{position: 'relative', ...styles}} {...props}>{tagContent}</div>;

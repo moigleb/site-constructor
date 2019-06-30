@@ -18,7 +18,7 @@ class LeftSideBar extends React.Component {
 
   onHandleClick = (element) => (e) => {
     this.props.selectedElement(element.tag);
-    const {activeIndex, elementProps} = this.state;
+    const {activeIndex} = this.state;
     let activeEl = e.target.classList.value;
     if(activeEl === "btn-active") {
       this.setState({
@@ -32,33 +32,16 @@ class LeftSideBar extends React.Component {
       })
     }
 
-
-    // if(activeEl.contains("btn")) {
-    //   activeEl.remove("btn");
-    //   activeEl.add("btn-active");
       this.props.onClick(element);
-    //
-    // } else if (activeEl.contains("btn-active")) {
-    //   this.props.unSelectedElement(element.id);
-    //   activeEl.remove("btn-active");
-    //   activeEl.add("btn");
-    // }
-
     if(element.id !== activeIndex) {
-      // activeEl.remove("btn");
-      // activeEl.add("btn-active")
-      // this.props.onClick(element);
       this.props.selectedElement(element);
 
     } else if (element.id === activeIndex) {
       this.props.unSelectedElement(element.id);
-      // activeEl.remove("btn-active");
-      // activeEl.add("btn");
     }
   };
 
   renderButtons = () => {
-    const {selectedElementProps: {selectedElement}} = this.props;
     const {activeIndex, isActive} = this.state;
     return this.state.elementProps.map((element, index) => {
       const className = (activeIndex === element.id && isActive ) ? `btn-active` :`btn`;
@@ -70,7 +53,6 @@ class LeftSideBar extends React.Component {
             onClick={this.onHandleClick(element)}
           />
         </div>
-
       </div>
     })
   };
@@ -95,6 +77,5 @@ class LeftSideBar extends React.Component {
 const mapStateToProps = state =>({
   selectedElementProps: state.selectedElementReducer,
 });
-
 
 export default connect(mapStateToProps, {selectedElement, unSelectedElement})(LeftSideBar)

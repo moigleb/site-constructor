@@ -1,8 +1,6 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { selectedElement } from "../LeftSideBar/actions";
-import {elementProps} from "../../utils/elementProps";
-
 import LeftSideBar from "../../containers/LeftSideBar";
 import MainContainer from "../../containers/MainContainer";
 import './style.scss';
@@ -18,8 +16,6 @@ class App extends React.Component {
 
 
   toggleMouseTooltip = (content) => {
-
-    // this.props.selectedElement(content);
     if(content.id === this.state.contentId) {
       this.setState(prevState => ({
         isMouseTooltipVisible: false,
@@ -34,15 +30,7 @@ class App extends React.Component {
         content: content.tag
       }));
     }
-
-
   };
-
-  // clickAnotherArea  = (e)=> {
-  //   this.setState(prevState => ({
-  //     isMouseTooltipVisible: false,
-  //   }));
-  // };
 
   render () {
     const{selectedElementProps:{selectedElement}} = this.props;

@@ -23,7 +23,7 @@ class Template extends React.Component {
 
   render() {
     return (
-      <div style={{display: 'block', textAlign: 'center'}}>
+      <div style={{display: 'block', textAlign: 'center' , marginBottom: 20}}>
         <div ref={this.myRef}>
           <div style={{overflow: 'hidden',  display: 'flex', padding: '20px 100px', justifyContent: "center", background: '#baf1fb'}}>
             <div style={{overflow: 'hidden', width: '100%', maxWidth: 1200, height: "calc(100vh - 60px)", background: "#fff", padding: '0 50px',
@@ -36,15 +36,13 @@ class Template extends React.Component {
         <Button onClick={this.handleSaveClick}
                 content="Save"
                 className="btn"
-                style={{maxWidth: 150}}/>
+                style={{maxWidth: 150, marginRight: 5}}/>
 
         <Button onClick={this.handleBackClick}
                 content="Back"
                 className="btn"
                 style={{maxWidth: 150}}/>
       </div>
-
-
     )
   }
 }
